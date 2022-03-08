@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "projects": {
+    "api": "apps/api",
+    "api-interfaces": "libs/api-interfaces",
+    "user-auth": "apps/user-auth",
+    "user-auth-e2e": "apps/user-auth-e2e"
+  }
+}

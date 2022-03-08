@@ -1,0 +1,28 @@
+{
+  "root": "apps/user-auth-e2e",
+  "sourceRoot": "apps/user-auth-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/user-auth-e2e/cypress.json",
+        "devServerTarget": "user-auth:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "user-auth:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/user-auth-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["user-auth"]
+}
