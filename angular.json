@@ -3,6 +3,7 @@
   "projects": {
     "api": "apps/api",
     "api-interfaces": "libs/api-interfaces",
+    "rest-api": "apps/rest-api",
     "user-auth": "apps/user-auth",
     "user-auth-e2e": "apps/user-auth-e2e"
   }

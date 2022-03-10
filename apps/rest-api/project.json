@@ -1,0 +1,33 @@
+{
+  "root": "apps/rest-api",
+  "sourceRoot": "apps/rest-api/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/node:webpack",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/rest-api",
+        "main": "apps/rest-api/src/main.js",
+        "tsConfig": "apps/rest-api/tsconfig.app.json",
+        "assets": ["apps/rest-api/src/assets"]
+      },
+      "configurations": {
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/node:node",
+      "options": {
+        "buildTarget": "rest-api:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/rest-api/**/*.ts"]
+      }
+    }
+  },
+  "tags": []
+}
